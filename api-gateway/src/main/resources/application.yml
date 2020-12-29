@@ -6,8 +6,8 @@ spring:
     config:
       uri: http://localhost:8888
 
-zuul:
-  routes:
-    address-service:
-      path: /address/**
-      serviceId: address-service
+#zuul:
+#  routes:
+#    address-service:
+#      path: /address/**
+#      serviceId: address-service

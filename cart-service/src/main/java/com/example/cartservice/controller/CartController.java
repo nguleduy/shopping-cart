@@ -1,10 +1,10 @@
-package com.example.addressservice.controller;
+package com.example.cartservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AddressController {
+public class CartController {
 
   @GetMapping("/hello")
   public String sayHello() {
