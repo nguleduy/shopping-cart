@@ -6,8 +6,20 @@ spring:
     config:
       uri: http://localhost:8888
 
-#zuul:
-#  routes:
-#    address-service:
-#      path: /address/**
-#      serviceId: address-service
+zuul:
+  routes:
+    product-service:
+      path: /product-service/**
+      serviceId: product-service
+    cart-service:
+      path: /cart-service/**
+      serviceId: cart-service
+    inventory-service:
+      path: /inventory-service/**
+      serviceId: inventory-service
+    order-service:
+      path: /order-service/**
+      serviceId: order-service
+    user-service:
+      path: /user-service/**
+      serviceId: user-service
