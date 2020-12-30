@@ -1,7 +1,5 @@
 package com.example.productservice.service;
 
-import com.example.productservice.dto.CarDTO;
-
 import java.util.List;
 
 public interface ProductService<T> {
@@ -12,5 +10,7 @@ public interface ProductService<T> {
 
   T findById(Long id);
 
-  List<CarDTO> getAllAvailable();
+  List<T> getAllAvailable();
+
+  List<T> findByCategory(String category);
 }

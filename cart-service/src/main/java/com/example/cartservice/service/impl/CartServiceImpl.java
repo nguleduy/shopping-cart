@@ -31,7 +31,7 @@ public class CartServiceImpl implements CartService {
     if (!productServiceCommunicator.isProductWithIdExist(cartItemDTO.getProductId())) {
       return new ResponseEntity<>("Product with id: " + cartItemDTO.getProductId() + " does not exist", HttpStatus.NOT_FOUND);
     }
-    if (!inventoryServiceCommunicator.returnInventoryItem(cartItemDTO)) {
+    if (!inventoryServiceCommunicator.updateInventoryItemAmount(cartItemDTO)) {
       return new ResponseEntity<>("There is no enough products in database", HttpStatus.CONFLICT);
     }
 

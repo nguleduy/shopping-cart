@@ -24,7 +24,7 @@ public class CarDTO extends ProductDTO{
   private int nrOfSeats;
 
   public CarDTO(CarEntity carEntity) {
-    super(carEntity.getId(),carEntity.getPrice(), carEntity.getCategory(), carEntity.getBrand(), carEntity.getModel(), carEntity.getWeight());
+    super(carEntity.getPicture(), carEntity.getId(),carEntity.getPrice(), carEntity.getCategory(), carEntity.getBrand(), carEntity.getModel(), carEntity.getWeight());
     this.maxSpeed = carEntity.getMaxSpeed();
     this.nrOfSeats = carEntity.getNrOfSeats();
   }

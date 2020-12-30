@@ -24,9 +24,9 @@ public class ProductServiceApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    carRepository.save(new CarEntity(10000.0, Category.CAR, "BMW", "X5", 2700, 248, 5));
-    carRepository.save(new CarEntity(13000.0, Category.CAR, "BMW", "Z3", 1700, 290, 2));
-    carRepository.save(new CarEntity(14000.0, Category.CAR, "Audi", "S5", 2300, 280, 4));
-    carRepository.save(new CarEntity(50000.0, Category.CAR, "Ferrari", "X5", 1900, 320, 2));
+    carRepository.save(new CarEntity("bmw_x5.jpg",10000.0,Category.CARS,"BMW","X5",2700,248,5));
+    carRepository.save(new CarEntity("bmw_z3.jpg",13000.0,Category.CARS,"BMW","Z3",1700,290,2));
+    carRepository.save(new CarEntity("default_car.jpg",14000.0,Category.CARS,"Audi","S5",2300,280,4));
+    carRepository.save(new CarEntity("default_car.jpg",50000.0,Category.CARS,"Ferrari","X5",1900,320,2));
   }
 }

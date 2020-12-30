@@ -36,8 +36,13 @@ public class ProductDTO {
   @NotEmpty
   private double weight;
 
-  public ProductDTO(Long id, double price, Category category,
+  @NotNull
+  @NotEmpty
+  private String picture;
+
+  public ProductDTO(String picture, Long id, double price, Category category,
                     String brand, String model, double weight) {
+    this.picture = picture;
     this.id = id;
     this.price = price;
     this.category = category;
@@ -47,6 +52,7 @@ public class ProductDTO {
   }
 
   public ProductDTO(ProductEntity productEntity) {
+    this.picture = productEntity.getPicture();
     this.id = productEntity.getId();
     this.price = productEntity.getPrice();
     this.category = productEntity.getCategory();

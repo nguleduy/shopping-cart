@@ -55,4 +55,10 @@ public class CarServiceImpl implements ProductService<CarDTO> {
             .filter(car -> inventoryServiceCommunicator.isProductAvailable(car.getId()))
             .collect(Collectors.toList());
   }
+
+  @Override
+  public List<CarDTO> findByCategory(String category) {
+    // TODO Auto-generated method stub
+    return null;
+  }
 }

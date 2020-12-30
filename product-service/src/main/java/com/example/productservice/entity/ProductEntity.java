@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -23,11 +26,12 @@ import javax.persistence.Table;
 public class ProductEntity {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   private double price;
 
+  @Enumerated(EnumType.STRING)
   private Category category;
 
   private String brand;
@@ -36,7 +40,10 @@ public class ProductEntity {
 
   private double weight;
 
-  public ProductEntity(double price, Category category, String brand, String model, double weight) {
+  private String picture;
+
+  public ProductEntity(String picture, double price, Category category, String brand, String model, double weight) {
+    this.picture = picture;
     this.price = price;
     this.category = category;
     this.brand = brand;
