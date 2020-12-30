@@ -1,5 +1,6 @@
 package com.example.productservice.service.impl;
 
+import com.example.productservice.dto.CarDTO;
 import com.example.productservice.dto.ProductDTO;
 import com.example.productservice.entity.ProductEntity;
 import com.example.productservice.repository.ProductRepository;
@@ -40,5 +41,11 @@ public class ProductServiceImpl implements ProductService<ProductDTO> {
     ProductEntity product = productRepository.findById(id).orElse(new ProductEntity());
 
     return new ProductDTO(product);
+  }
+
+  @Override
+  public List<CarDTO> getAllAvailable() {
+    // TODO Auto-generated method stub
+    return null;
   }
 }
