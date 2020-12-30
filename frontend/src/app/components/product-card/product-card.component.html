@@ -9,7 +9,7 @@
     </h4>
     <h3>
           <span class="label label-primary">
-            Model: {{product.category}}
+            Model: {{product.model}}
           </span>
     </h3>
     <h4>
@@ -18,7 +18,10 @@
           </span>
     </h4>
     <h3>
-      <button class="btn btn-success" (click)="showDetails()">Details</button>
+      <div>
+        <input #amount placeholder="amount"/>
+        <button style="margin:5px;" class="btn btn-success" (click)="addToCart(amount.value)">Add to cart</button>
+      </div>
     </h3>
   </div>
 </div>

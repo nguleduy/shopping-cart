@@ -1,0 +1,24 @@
+.table-striped {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.buttons {
+  position: relative;
+  padding-top: 300px;
+  margin-right: 600px;
+}
+
+button[class*=btn] {
+  width: 200px;
+  height: 30px;
+  background-color: rgb(235, 45, 28);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}

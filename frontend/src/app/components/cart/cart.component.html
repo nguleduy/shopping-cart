@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <th>brand</th>
+    <th>model</th>
+    <th>price</th>
+    <th>amount</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.brand}}</td>
+      <td>{{product.model}}</td>
+      <td>{{product.price}}</td>
+      <td>amount??</td>
+      <td>
+        <button class="btn btn-danger">Delete</button>
+    </tr>
+    </tbody>
+  </table>
+  <td>
+    <button class="btn btn-primary">Prodceed payment</button>
+</div>
