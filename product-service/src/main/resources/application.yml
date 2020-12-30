@@ -1,5 +1,6 @@
-application:
-  name: product-service
+spring:
+  application:
+    name: product-service
 
   cloud:
     config:
