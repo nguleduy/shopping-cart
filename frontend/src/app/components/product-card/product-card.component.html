@@ -1,0 +1,24 @@
+<div class="thumbnail">
+  <img src="assets/images/{{product.picture}}" width="500" height="600">
+  <div class="caption">
+
+    <h4>
+          <span class="label label-primary">
+            Brand: {{product.brand}}
+          </span>
+    </h4>
+    <h3>
+          <span class="label label-primary">
+            Model: {{product.category}}
+          </span>
+    </h3>
+    <h4>
+          <span class="label label-primary">
+            Price: {{product.price | currency:'PLN' : true}}
+          </span>
+    </h4>
+    <h3>
+      <button class="btn btn-success" (click)="showDetails()">Details</button>
+    </h3>
+  </div>
+</div>

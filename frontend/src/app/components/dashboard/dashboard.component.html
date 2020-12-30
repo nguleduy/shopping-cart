@@ -1,0 +1,8 @@
+<div class="grid grid-pad">
+  <a *ngFor="let category of categories" class="col-1-4"
+     routerLink="/{{category}}">
+    <div class="module category">
+      <h4>{{category}}</h4>
+    </div>
+  </a>
+</div>
