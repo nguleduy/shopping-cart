@@ -34,4 +34,9 @@ public class InventoryServiceImpl implements InventoryService {
 
     return true;
   }
+
+  @Override
+  public boolean isProductAvailable(Long productId) {
+    return inventoryRepository.findByProductId(productId).getAmount() > 0;
+  }
 }

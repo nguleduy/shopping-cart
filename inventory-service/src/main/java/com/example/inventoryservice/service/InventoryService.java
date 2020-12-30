@@ -7,4 +7,6 @@ public interface InventoryService {
   boolean updateInventoryItemAmount(InventoryItemDTO inventoryItemDTO);
 
   boolean returnInventoryItem(InventoryItemDTO inventoryItemDTO);
+
+  boolean isProductAvailable(Long productId);
 }
